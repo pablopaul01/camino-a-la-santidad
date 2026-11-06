@@ -1,0 +1,25 @@
+*{box-sizing:border-box}body{margin:0;background:#0c151b;color:#f1e7cf;font:16px/1.5 system-ui;overflow:hidden}#view,canvas{position:fixed;inset:0;width:100%;height:100%;touch-action:none}header{position:fixed;top:24px;left:32px;pointer-events:none;text-shadow:0 2px 8px #000}small{font-size:10px;letter-spacing:.24em;color:#d4b981}h1{font:28px Georgia;margin:6px 0}header p{font-size:13px;max-width:70vw}button{border:1px solid #b69a64;background:#19242be8;color:#f5e6c4;padding:13px 22px;cursor:pointer;border-radius:3px;font:inherit;touch-action:none}button:hover{background:#3b3a30}button:focus-visible{outline:3px solid #fff}button:disabled{opacity:.5}.corner{position:fixed;right:20px;top:24px;font-size:13px}#crosshair{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.6;pointer-events:none}#caption{position:fixed;bottom:22%;left:50%;transform:translateX(-50%);width:min(620px,85%);text-align:center;text-shadow:0 2px 5px #000;background:#0c151baa;padding:8px;pointer-events:none}#caption:empty{display:none}#interact{position:fixed;bottom:13%;left:50%;transform:translateX(-50%)}section{position:fixed;inset:0;background:linear-gradient(90deg,#080f16f5,#10212c99);display:grid;place-items:center;padding:30px}section>div{max-width:640px}h2{font:clamp(36px,6vw,65px)/1.1 Georgia;margin:20px 0}section p{max-width:520px;color:#c5c9c7}section button{background:#c5a66d;color:#121b20}.help{font-size:12px;opacity:.8}[hidden]{display:none!important}#touch{display:none;position:fixed;bottom:18px;left:16px;right:16px;pointer-events:none;justify-content:space-between;align-items:end}#pad{pointer-events:auto;text-align:center}#pad button{width:48px;padding:11px}#touch span{font-size:11px;max-width:95px;opacity:.65}@media(pointer:coarse){#touch{display:flex}#interact{bottom:160px}#caption{bottom:215px}}@media(max-width:600px){header{left:16px;top:12px}h1{font-size:22px}.corner{right:12px;top:12px}header small{font-size:8px}section{padding:24px}.help{font-size:11px}}
+
+.speech{position:fixed;z-index:4;transform:translate(-50%,0);max-height:calc(100dvh - 32px);overflow-y:auto;width:min(360px,calc(100vw - 48px));padding:18px 22px;background:#fff3d8;color:#251f19;border:2px solid #493d2e;border-radius:24px;box-shadow:0 6px 20px #0005}
+.speech::after{content:"";position:absolute;bottom:-17px;left:50%;width:24px;height:24px;background:#fff3d8;border-right:2px solid #493d2e;border-bottom:2px solid #493d2e;transform:skewY(30deg) rotate(30deg)}
+.speech strong{display:block;font:600 17px system-ui}.speech small{display:block;color:#67553b;font-size:10px;letter-spacing:.06em}.speech p{font-size:17px;line-height:1.5;margin:12px 0}.speech span{font-size:12px}.speech button{float:right;background:#493d2e;padding:7px 12px;font-size:13px}.pause-options{border-top:1px solid #74634b;margin-top:20px;padding-top:15px}.pause-options a{color:#f1ce8a}.pause-options details{max-width:520px}.pause-options summary{cursor:pointer}#menu{overflow-y:auto}#menu>div{padding:20px 0}
+@media(pointer:fine){.speech button{pointer-events:none}.speech{pointer-events:none}}
+@media(max-width:600px){.speech{left:50%!important;top:48%!important;transform:translate(-50%,-50%);padding:14px 18px}.speech p{font-size:15px}.speech button{min-height:44px}}
+
+@media(min-height:500px){.speech{overflow:visible}}
+
+
+#departure{position:fixed;inset:0;z-index:5;background:#0c151b;display:grid;place-items:center;padding:32px;pointer-events:none;text-align:center}
+#departure>div{max-width:620px}#departure p{color:#c5c9c7}#menu{z-index:10}
+
+
+#road-veil{position:fixed;inset:0;z-index:1;pointer-events:none}
+.road-speech{left:50%;top:35%;transform:translate(-50%,0)}
+.road-speech::after{display:none}
+body:has(#view[data-chapter="road"]) header{z-index:3}
+body:has(#view[data-chapter="road"]) #pause{z-index:11}
+
+
+.speech.speech-self{left:50%!important;top:auto!important;bottom:18%;transform:translate(-50%,0);background:#e1edf1}
+.speech.speech-self::after{background:#e1edf1;left:80%}
+@media(max-width:600px){.speech.speech-self{bottom:22%;transform:translate(-50%,0)}}

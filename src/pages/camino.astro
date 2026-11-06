@@ -1,0 +1,22 @@
+---
+import RoadOverlay from '../components/RoadOverlay.astro';
+import '../styles/game.css';
+---
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Caminos de santidad · El camino a Damasco</title>
+ </head>
+ <body>
+  <RoadOverlay />
+  <script>
+   import('../game/scene').catch(error=>{
+    const message=document.getElementById('failure');
+    if(message)message.textContent='No se pudo cargar el camino. Recarga la página y revisa la consola si el problema persiste.';
+    console.error(error);
+   });
+  </script>
+ </body>
+</html>

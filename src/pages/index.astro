@@ -1,0 +1,46 @@
+---
+
+import GameOverlay from '../components/OpeningOverlay.astro';
+
+import '../styles/game.css';
+
+---
+
+<!doctype html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <meta name="description" content="Explora Jerusalén en una aventura narrativa en primera persona." />
+
+    <title>Caminos de santidad · Jerusalén</title>
+
+  </head>
+
+  <body>
+
+    <GameOverlay />
+
+    <script>
+
+      import('../game/scene').catch((error) => {
+
+        const message = document.getElementById('failure');
+
+        if (message) message.textContent = 'No se pudo iniciar el escenario. Usa un navegador con WebGL2 y recarga la página.';
+
+        console.error(error);
+
+      });
+
+    </script>
+
+  </body>
+
+</html>
+

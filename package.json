@@ -1,0 +1,16 @@
+{
+  "name": "caminos-de-santidad",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.11.2",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "test": "tsx --test tests/*.test.*"
+  },
+  "dependencies": {"astro": "5.18.2", "three": "0.170.0"},
+  "devDependencies": {"@astrojs/check": "^0.9.4", "@types/three": "^0.170.0", "@types/node": "^22.0.0", "tsx": "^4.20.0", "typescript": "5.8.3"}
+}

@@ -1,0 +1,30 @@
+<main data-chapter="opening" id="view" aria-label="Escenario tridimensional de Jerusalén"></main>
+<header><small>LA VIDA DE PABLO / ACTO I · APERTURA</small><h1>Antes del camino</h1><p id="objective">Acércate al vecino junto a la puerta y escucha.</p></header>
+<button id="pause" class="corner">Pausa</button><div id="crosshair" aria-hidden="true">+</div>
+<div id="caption" role="status"></div><button id="interact" hidden>Examinar · E</button>
+<div id="touch"><div id="pad"><button data-key="KeyW" aria-label="Avanzar">↑</button><div><button data-key="KeyA" aria-label="Izquierda">←</button><button data-key="KeyS" aria-label="Retroceder">↓</button><button data-key="KeyD" aria-label="Derecha">→</button></div></div><span>Arrastra la escena para mirar</span></div>
+<section id="menu"><div><small>UN CAMINO QUE SE RECORRE DESDE DENTRO</small><h2>Jerusalén.<br>Antes del encuentro.</h2><p>Eres Saulo. Todavía no has emprendido el camino a Damasco. En este patio, alguien quiere hablar contigo.</p><button id="start" disabled>Cargando escenario…</button><p class="help">WASD o flechas para caminar · Mouse o arrastre para mirar<br>E para examinar · Esc para pausar<br>En el teléfono: flechas y arrastre.</p><p class="help">Primera prueba de recorrido y escucha. Figuras y escenario provisionales.</p><p id="failure" role="alert"></p>
+<div class="pause-options">
+ <button id="restart">Reiniciar escena</button>
+ <p><a href="/damasco">Prueba técnica de Damasco</a></p>
+ <details><summary>Fuentes y recreación</summary>
+  <p>El vecino, sus palabras y este patio son una recreación. No son una cita bíblica.</p>
+  <p>Hechos presenta a Saulo participando en la persecución. La escena muestra sus consecuencias, sin atribuirle pensamientos o respuestas inventadas como hechos.</p>
+  <a href="https://bible.usccb.org/bible/acts/8" target="_blank" rel="noopener">Hechos 8,1–3</a><span> · Hechos 9,1–2</span>
+ </details>
+ <p class="help">Esta prueba incluye el encuentro, la autorización y la partida. Después de partir continúa el primer tramo del camino.</p>
+</div></div></section>
+<div id="speech" class="speech" hidden role="region" aria-label="Conversación con el vecino">
+ <strong id="speech-speaker">Vecino</strong><small id="speech-disclosure">Diálogo recreado</small>
+ <p id="speech-text" aria-live="polite"></p>
+ <span id="speech-progress"></span>
+ <button id="speech-next">Continuar · E</button>
+</div>
+<section id="ending" hidden></section>
+
+<div id="departure" hidden role="status">
+ <div><small>FIN DEL PRIMER TRAMO</small><h2>Rumbo a Damasco</h2>
+ <p>Saulo parte con una misión que todavía no ha cambiado.</p>
+ <p id="departure-note" hidden>Cargando el primer tramo del camino. El encuentro con Cristo todavía no está implementado.<br />Esc abre el menú para reiniciar o continuar explorando las opciones.</p>
+ </div>
+</div>
